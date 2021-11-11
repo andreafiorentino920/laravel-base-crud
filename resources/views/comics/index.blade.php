@@ -17,9 +17,9 @@
                 <tr>
                     <td>{{$comic['title']}}</td>
                     <td>{{$comic['isbn']}}</td>
-                    <td>{{$comic['number']}} €</td>
+                    <td>{{$comic['number']}}</td>
                     <td>{{$comic['publishing']}}</td>
-                    <td>{{$comic['price']}}</td>
+                    <td>{{$comic['price']}}€</td>
                     <td><a href="{{route('comics.show', $comic['id'])}}">
                     <button type="button" class="btn btn-primary">Visualizza</button></a></td>
                 </tr>
