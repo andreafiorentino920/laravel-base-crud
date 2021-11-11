@@ -2,7 +2,7 @@
 
 @section('mainContent')
     <h1>Lista fumetti</h1>
-    <table class="table table-striped table-dark">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th scope="col">Titolo</th>
@@ -21,7 +21,7 @@
                     <td>{{$comic['publishing']}}</td>
                     <td>{{$comic['price']}}</td>
                     <td><a href="{{route('comics.show', $comic['id'])}}">
-                    <button type="button" class="btn btn-info">Visualizza</button></a></td>
+                    <button type="button" class="btn btn-primary">Visualizza</button></a></td>
                 </tr>
             @endforeach
         </tbody>
