@@ -22,6 +22,14 @@
                     <td>{{$comic['price']}}€</td>
                     <td><a href="{{route('comics.show', $comic['id'])}}">
                     <button type="button" class="btn btn-primary">Visualizza</button></a></td>
+                    <td><a href="{{route("comics.edit", $comic['id'])}}"><button type="button" class="btn btn-warning">Edit</button></a></td>
+                    <td>
+                        <form onsubmit="return confirm('Vuoi davvero cancellarla??');" action="{{route("comics.destroy", $comic['id'])}}" method="POST">
+                            @csrf
+                            @method("DELETE")
+                            <button type="SUBMIT" class="btn btn-danger">Elimina</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
